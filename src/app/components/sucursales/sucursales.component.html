@@ -1,0 +1,92 @@
+<div class="container mt-4">
+  <div class="card shadow-lg p-4 bg-white rounded">
+    <h3 class="text-center mb-4">📍 Información Sucursales</h3>
+
+    <!-- Selección de Provincia -->
+    <div class="mb-3">
+      <label for="provincia" class="form-label fw-medium">Seleccionar Provincia</label>
+      <select class="form-select rounded-3 shadow-sm" id="provincia" [(ngModel)]="selectedProvincia" (change)="onProvinciaChange()">
+        <option value="" disabled selected>Seleccione una provincia</option>
+        <option *ngFor="let provincia of provincias" [value]="provincia.codProvincia">
+          {{ provincia.nomProvincia }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Selección de Localidad -->
+    <div class="mb-4">
+      <label for="localidad" class="form-label fw-medium">Seleccionar Localidad</label>
+      <select class="form-select rounded-3 shadow-sm" id="localidad" [(ngModel)]="selectedLocalidad" (change)="onLocalidadChange()">
+        <option value="" disabled selected>Seleccione una localidad</option>
+        <option *ngFor="let localidad of localidades" [value]="localidad.nroLocalidad">
+          {{ localidad.nomLocalidad }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Buscar -->
+    <div class="mb-3">
+      <label for="busqueda" class="form-label fw-medium">🔍 Buscar Sucursal</label>
+      <input type="text" id="busqueda" class="form-control rounded-3 shadow-sm" placeholder="Ingrese el nombre de la sucursal" [(ngModel)]="searchTerm">
+    </div>
+
+    <!-- Tabla de Sucursales -->
+    <div class="table-responsive mt-3" *ngIf="sucursales.length > 0">
+      <table class="table table-hover align-middle">
+        <thead class="bg-light">
+          <tr class="text-center">
+            <th>CUIT</th>
+            <th>Razón Social</th>
+            <th>Sucursal</th>
+            <th>Calle</th>
+            <th>Número</th>
+            <th>Teléfonos</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let sucursal of sucursales | filtroSucursal: searchTerm" class="text-center">
+            <td>{{ sucursal.cuit }}</td>
+            <td>{{ sucursal.razonSocial }}</td>
+            <td>{{ sucursal.nomSucursal }}</td>
+            <td>{{ sucursal.calle }}</td>
+            <td>{{ sucursal.nroCalle }}</td>
+            <td>{{ sucursal.telefonos }}</td>
+            <td>
+              <button class="btn btn-outline-primary btn-sm rounded-pill" (click)="abrirModal(sucursal)">
+               Ver Más
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="sucursalModal" tabindex="-1" aria-labelledby="sucursalModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content rounded-4 border-0 shadow">
+      <div class="modal-header bg-primary text-white rounded-top-4">
+        <h5 class="modal-title fw-bold" id="sucursalModalLabel">📌 Detalles de Sucursal</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="sucursalSeleccionada?.horarioSucursal?.length">
+          <p class="fw-semibold text-primary">🕒 Horario:</p>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let dia of sucursalSeleccionada.horarioSucursal">
+              <strong>{{ dia.dia }}:</strong> {{ dia.apertura }} - {{ dia.cierre }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-outline-primary px-4 py-2 rounded-pill fw-medium" data-bs-dismiss="modal">
+          ✖ Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+.navbar {
+    padding: 0.8rem 1rem;
+}
+
+.nav-link {
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #f8d210 !important;
+    transform: scale(1.05);
+}
+
+.badge {
+    font-size: 0.8rem;
+    min-width: 1.4rem;
+    min-height: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}

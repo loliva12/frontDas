@@ -1,0 +1,48 @@
+<div class="container mt-3">
+    <h3 class="text-center">🛒 Mi carrito</h3>
+    <hr/>
+
+    <div class="row">
+        <div class="col-sm-9">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    @if (listCarrito.length > 0) {
+                        <div class="row g-3">
+                            @for(item of listCarrito; track item.producto){
+                                <div class="col-md-12">
+                                    <div class="d-flex align-items-center border rounded p-2 shadow-sm">
+                                        <img [src]="item.producto.imagen" width="60" height="70" 
+                                             class="rounded me-3" alt="{{ item.producto.nom_producto }}" />
+
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">{{ item.producto.nom_producto }}</h6>
+                                        </div>
+
+                                        <button (click)="eliminarItem($index)" class="btn btn-outline-danger btn-sm">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="d-flex justify-content-end mt-3">
+                            <button (click)="limpiarCarrito()" class="btn btn-danger btn-sm rounded-pill shadow">
+                                <i class="fa fa-trash-alt"></i> Vaciar carrito
+                            </button>
+                        </div>
+                    } @else {
+                        <p class="text-center text-muted">🛍️ Tu carrito está vacío.</p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón para comparar precios -->
+        <div class="col-sm-3 d-flex justify-content-end align-items-center">
+            <button (click)="compararPrecios()" class="btn btn-primary btn-sm rounded-pill shadow">
+                <i class="fa fa-exchange-alt mr-2"></i> Comparar precios
+            </button>
+        </div>
+    </div>
+</div>

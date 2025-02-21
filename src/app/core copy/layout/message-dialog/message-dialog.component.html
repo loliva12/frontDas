@@ -1,0 +1,27 @@
+<div class="modal-content rounded-4 shadow-sm border-0">
+    <!-- Encabezado del modal -->
+    <div class="modal-header border-0 py-2 px-3"
+         [ngClass]="{'bg-success-subtle text-success': message?.title, 'bg-danger-subtle text-danger': !message?.title}">
+        <h5 class="modal-title d-flex align-items-center gap-2 fw-semibold">
+            <i class="bi fs-5"
+               [ngClass]="{'bi-check-circle': message?.title, 'bi-exclamation-triangle': !message?.title}"></i>
+            <span>{{ message?.title || 'Error' }}</span>
+        </h5>
+        <button type="button" class="btn-close" (click)="activeModal.close()" aria-label="Cerrar"></button>
+    </div>
+
+    <!-- Cuerpo del modal -->
+    <div class="modal-body text-center px-4 pt-3 pb-2">
+        <p class="fs-6 text-muted" [innerHTML]="message?.text"></p>
+    </div>
+
+    <!-- Pie del modal -->
+    <div class="modal-footer border-0 justify-content-center pb-3">
+        <button type="button"
+                class="btn px-3 py-1 fw-medium rounded-3 shadow-none"
+                [ngClass]="{'btn-outline-success': message?.title, 'btn-outline-danger': !message?.title}" 
+                (click)="activeModal.close()">
+            Cerrar
+        </button>
+    </div>
+</div>

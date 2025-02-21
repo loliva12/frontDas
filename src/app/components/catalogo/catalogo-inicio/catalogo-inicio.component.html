@@ -1,0 +1,84 @@
+<div class="container mt-4">
+  <h3 class="text-center">🛍️ Catálogo</h3>
+  <hr />
+
+  <!-- Filtros de búsqueda -->
+<div class="row g-3 mb-3">
+  <!-- Rubro -->
+  <div class="col-md-3">
+    <label for="rubroSelect" class="form-label fw-bold">Rubro:</label>
+    <select id="rubroSelect" [(ngModel)]="selectedRubro" (change)="onRubroChange()" class="form-select">
+      <option [value]="null">Todos</option>
+      <option *ngFor="let rubro of rubro" [value]="rubro.nro_rubro">
+        {{ rubro.nom_rubro }}
+      </option>
+    </select>
+  </div>
+
+  <!-- Categoría -->
+  <div class="col-md-3">
+    <label for="categoriaSelect" class="form-label fw-bold">Categoría:</label>
+    <select id="categoriaSelect" [(ngModel)]="selectedCategoria" (change)="onCategoriaChange()" class="form-select" [disabled]="!selectedRubro">
+      <option [value]="null">Todas</option>
+      <option *ngFor="let categoria of categorias" [value]="categoria.nroCategoria">
+        {{ categoria.nomCategoria }}
+      </option>
+    </select>
+  </div>
+
+  <!-- Tipo de Producto -->
+  <div class="col-md-3">
+    <label for="tipoProductoSelect" class="form-label fw-bold">Tipo de Producto:</label>
+    <select id="tipoProductoSelect" [(ngModel)]="selectedTipoProducto" (change)="onTipoProductoChange()" class="form-select" [disabled]="!selectedCategoria">
+      <option [value]="null">Todos</option>
+      <option *ngFor="let tipo of tiposProductos" [value]="tipo.nro_tipo_producto">
+        {{ tipo.nom_tipo_producto }}
+      </option>
+    </select>
+  </div>
+
+  <!-- Marca -->
+  <div class="col-md-3">
+    <label for="marcaSelect" class="form-label fw-bold">Marca:</label>
+    <select id="marcaSelect" [(ngModel)]="selectedMarca" (change)="onMarcaChange()" class="form-select" [disabled]="!selectedTipoProducto">
+      <option [value]="null">Todas</option>
+      <option *ngFor="let marca of marcas" [value]="marca.nro_marca">
+        {{ marca.nom_marca }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<!-- Barra de búsqueda amplia -->
+<div class="row mb-3">
+  <div class="col-12">
+    <input id="searchInput" type="text" class="form-control form-control-lg" [(ngModel)]="searchText" placeholder="Ingrese un producto...">
+  </div>
+</div>
+
+
+  <!-- Listado de productos -->
+  <div class="row">
+    @for (item of productosFiltrados | filterProducts: searchText; track item.codBarra)  {
+      <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
+        <div class="card shadow-sm h-100">
+          <img src="{{item.imagen}}" class="card-img-top" alt="{{item.nom_producto}}" />
+          <div class="card-body d-flex flex-column">
+            <p class="fw-bold mb-1">{{ item.nom_producto }}</p>
+            <p class="text-muted small mb-2">{{ item.nom_marca }}</p>
+            <div class="mt-auto">
+              <button 
+                (click)="agregarAlCarrito(item)" 
+                [disabled]="estaEnCarrito(item)" 
+                type="button" 
+                class="btn btn-sm btn-dark w-100">
+                <i class="fa fa-shopping-cart"></i> 
+                {{ estaEnCarrito(item) ? 'Agregado' : 'Agregar' }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

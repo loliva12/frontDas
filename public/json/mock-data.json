@@ -1,0 +1,98 @@
+{
+    "totals": [
+      { "superId": 1, "superName": "Supermercado A", "totalPrices": 20000 },
+      { "superId": 2, "superName": "Supermercado B", "totalPrices": 19500 },
+      { "superId": 3, "superName": "Supermercado C", "totalPrices": 19800 }
+    ],
+    "products": [
+      {
+        "productName": "Arroz Molino ala",
+        "brandName": "Molino Ala",
+        "barcode": "123456789",
+        "image": "arroz.png",
+        "prices": [
+          { "superName": "Supermercado A", "price": 1900.99, "cheapest": false },
+          { "superName": "Supermercado B", "price": 1850.00, "cheapest": true },
+          { "superName": "Supermercado C", "price": 1880.50, "cheapest": false }
+        ]
+      },
+      {
+        "productName": "Banana 1kg",
+        "brandName": "Genérica",
+        "barcode": "987654321",
+        "image": "banana.jpg",
+        "prices": [
+          { "superName": "Supermercado A", "price": 900.50, "cheapest": false },
+          { "superName": "Supermercado B", "price": 850.00, "cheapest": true },
+          { "superName": "Supermercado C", "price": 880.30, "cheapest": false }
+        ]
+      },
+      {
+        "productName": "Coca cola 1lt",
+        "brandName": "Coca-Cola",
+        "barcode": "1122334455",
+        "image": "coca.jpg",
+        "prices": [
+          { "superName": "Supermercado A", "price": 1800.00, "cheapest": false },
+          { "superName": "Supermercado B", "price": 1750.00, "cheapest": true },
+          { "superName": "Supermercado C", "price": 1790.00, "cheapest": false }
+        ]
+      },
+      {
+        "productName": "Yerba mate Playadito 1kg",
+        "brandName": "Playadito",
+        "barcode": "5566778899",
+        "image": "yerba.jpg",
+        "prices": [
+          { "superName": "Supermercado A", "price": 4400.30, "cheapest": false },
+          { "superName": "Supermercado B", "price": 4300.00, "cheapest": true },
+          { "superName": "Supermercado C", "price": 4350.50, "cheapest": false }
+        ]
+      },
+      {
+        "productName": "Costilla 1kg",
+        "brandName": "Genérica",
+        "barcode": "9988776655",
+        "image": "costilla.jpg",
+        "prices": [
+          { "superName": "Supermercado A", "price": 9900.00, "cheapest": false },
+          { "superName": "Supermercado B", "price": 9700.00, "cheapest": true },
+          { "superName": "Supermercado C", "price": 9800.00, "cheapest": false }
+        ]
+      },
+      {
+        "productName": "Merluza 1kg",
+        "brandName": "Genérica",
+        "barcode": "2233445566",
+        "image": "merluza.jpg",
+        "prices": [
+          { "superName": "Supermercado A", "price": 6800.00, "cheapest": false },
+          { "superName": "Supermercado B", "price": 6700.00, "cheapest": true },
+          { "superName": "Supermercado C", "price": 6750.00, "cheapest": false }
+        ]
+      },
+      {
+        "productName": "Leche",
+        "brandName": "Genérica",
+        "barcode": "1122446688",
+        "image": "leche.jpg",
+        "prices": [
+          { "superName": "Supermercado A", "price": 1700.00, "cheapest": false },
+          { "superName": "Supermercado B", "price": 1650.00, "cheapest": true },
+          { "superName": "Supermercado C", "price": 1680.00, "cheapest": false }
+        ]
+      },
+      {
+        "productName": "Lays 90g",
+        "brandName": "Lays",
+        "barcode": "3344556677",
+        "image": "papas.jpg",
+        "prices": [
+          { "superName": "Supermercado A", "price": 1460.00, "cheapest": false },
+          { "superName": "Supermercado B", "price": 1400.00, "cheapest": true },
+          { "superName": "Supermercado C", "price": 1440.00, "cheapest": false }
+        ]
+      }
+    ]
+  }
+  
