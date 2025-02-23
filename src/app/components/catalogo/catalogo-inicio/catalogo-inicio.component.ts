@@ -62,7 +62,7 @@ export class CatalogoInicioComponent implements OnInit {
       next: (data: any) => { 
         console.log("Respuesta de la API:", data);
         this.productos = data; 
-        this.productosFiltrados = [...this.productos]; // 🔥 Ahora se mostrarán todos los productos al inicio
+        this.productosFiltrados = [...this.productos]; 
       },
       error: (e) => {
         console.error("Error al obtener productos:", e);
