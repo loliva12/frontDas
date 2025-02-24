@@ -2,9 +2,6 @@ import { Injectable } from '@angular/core';
 import { Carrito } from '../modelo/carrito';
 import { Producto } from '../../api/modelos/producto.model';
 
-
-
-
 @Injectable({
   providedIn: 'root'
 })

@@ -28,7 +28,7 @@ export class AppComponent {
   }
 
   showSplash() {
-    if (typeof document !== 'undefined') { // Asegurarse de que document esté disponible
+    if (typeof document !== 'undefined') { 
       const splash = document.getElementById('splash-screen');
       if (splash) {
         splash.classList.remove('splash-hidden');
@@ -38,7 +38,7 @@ export class AppComponent {
   }
 
   hideSplash() {
-    if (typeof document !== 'undefined') { // Asegurarse de que document esté disponible
+    if (typeof document !== 'undefined') { 
       const splash = document.getElementById('splash-screen');
       if (splash) {
         splash.classList.remove('splash-visible');

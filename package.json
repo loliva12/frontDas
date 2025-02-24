@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --open --configuration=development-es",
+    "start-en": "ng serve --open --port 4201 --configuration=development-en",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:finalv2": "node dist/finalv2/server/server.mjs"
+    "extract-i18n": "ng extract-i18n --output-path=src/locale && xliffmerge --profile xliffmerge.json"
   },
   "private": true,
   "dependencies": {

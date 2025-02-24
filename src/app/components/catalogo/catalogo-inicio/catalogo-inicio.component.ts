@@ -45,6 +45,7 @@ export class CatalogoInicioComponent implements OnInit {
   selectedCategoria: number | null = null;
   selectedTipoProducto: number | null = null;
   selectedMarca: number | null = null; 
+  selectedLanguage: string = 'es'; 
 
 
   ngOnInit(): void {
@@ -100,7 +101,9 @@ export class CatalogoInicioComponent implements OnInit {
 
   getRubros() {
     this.rubroService.getRubro().subscribe({
+
       next: (data: Rubro[]) => {
+
         console.log("Rubros obtenidos:", data);
         this.rubro = data;
       },
@@ -203,8 +206,8 @@ onMarcaChange() {
     console.log('Carrito actualizado:', this.carritoService.getCarrito());
 
     this.messageService.showMessage({
-      title: 'Producto agregado',
-      text: `${item.nom_producto} se ha agregado al carrito.`
+      title: $localize`:@@productoAgregado:Producto agregado`,
+      text: $localize`:@@productoAgregadoTexto:${item.nom_producto} se ha agregado al carrito.`
     });
   }
 

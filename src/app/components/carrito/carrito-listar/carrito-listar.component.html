@@ -1,5 +1,5 @@
 <div class="container mt-3">
-    <h3 class="text-center">🛒 Mi carrito</h3>
+    <h3 class="text-center" i18n>🛒 Mi carrito</h3>
     <hr/>
 
     <div class="row">
@@ -28,11 +28,11 @@
 
                         <div class="d-flex justify-content-end mt-3">
                             <button (click)="limpiarCarrito()" class="btn btn-danger btn-sm rounded-pill shadow">
-                                <i class="fa fa-trash-alt"></i> Vaciar carrito
+                                <i class="fa fa-trash-alt"></i> <span i18n>Vaciar carrito</span>
                             </button>
                         </div>
                     } @else {
-                        <p class="text-center text-muted">🛍️ Tu carrito está vacío.</p>
+                        <p class="text-center text-muted" i18n>🛍️ Tu carrito está vacío.</p>
                     }
                 </div>
             </div>
@@ -41,7 +41,7 @@
         <!-- Botón para comparar precios -->
         <div class="col-sm-3 d-flex justify-content-end align-items-center">
             <button (click)="compararPrecios()" class="btn btn-primary btn-sm rounded-pill shadow">
-                <i class="fa fa-exchange-alt mr-2"></i> Comparar precios
+                <i class="fa fa-exchange-alt mr-2"></i> <span i18n>Comparar precios</span>
             </button>
         </div>
     </div>

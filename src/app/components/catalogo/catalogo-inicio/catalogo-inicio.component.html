@@ -1,61 +1,60 @@
 <div class="container mt-4">
-  <h3 class="text-center">🛍️ Catálogo</h3>
+  <h3 class="text-center" i18n>🛍️ Catálogo</h3>
   <hr />
 
   <!-- Filtros de búsqueda -->
-<div class="row g-3 mb-3">
-  <!-- Rubro -->
-  <div class="col-md-3">
-    <label for="rubroSelect" class="form-label fw-bold">Rubro:</label>
-    <select id="rubroSelect" [(ngModel)]="selectedRubro" (change)="onRubroChange()" class="form-select">
-      <option [value]="null">Todos</option>
-      <option *ngFor="let rubro of rubro" [value]="rubro.nro_rubro">
-        {{ rubro.nom_rubro }}
-      </option>
-    </select>
+  <div class="row g-3 mb-3">
+    <!-- Rubro -->
+    <div class="col-md-3">
+      <label for="rubroSelect" class="form-label fw-bold" i18n>Rubro:</label>
+      <select id="rubroSelect" [(ngModel)]="selectedRubro" (change)="onRubroChange()" class="form-select">
+        <option [value]="null" i18n>Todos</option>
+        <option *ngFor="let rubro of rubro" [value]="rubro.nro_rubro">
+          {{ rubro.rubro }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Categoría -->
+    <div class="col-md-3">
+      <label for="categoriaSelect" class="form-label fw-bold" i18n>Categoría:</label>
+      <select id="categoriaSelect" [(ngModel)]="selectedCategoria" (change)="onCategoriaChange()" class="form-select" [disabled]="!selectedRubro">
+        <option [value]="null" i18n>Todas</option>
+        <option *ngFor="let categoria of categorias" [value]="categoria.nroCategoria">
+          {{ categoria.categoria }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Tipo de Producto -->
+    <div class="col-md-3">
+      <label for="tipoProductoSelect" class="form-label fw-bold" i18n>Tipo de Producto:</label>
+      <select id="tipoProductoSelect" [(ngModel)]="selectedTipoProducto" (change)="onTipoProductoChange()" class="form-select" [disabled]="!selectedCategoria">
+        <option [value]="null" i18n>Todos</option>
+        <option *ngFor="let tipo of tiposProductos" [value]="tipo.nro_tipo_producto">
+          {{ tipo.tipo_producto }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Marca -->
+    <div class="col-md-3">
+      <label for="marcaSelect" class="form-label fw-bold" i18n>Marca:</label>
+      <select id="marcaSelect" [(ngModel)]="selectedMarca" (change)="onMarcaChange()" class="form-select" [disabled]="!selectedTipoProducto">
+        <option [value]="null" i18n>Todas</option>
+        <option *ngFor="let marca of marcas" [value]="marca.nro_marca">
+          {{ marca.nom_marca }}
+        </option>
+      </select>
+    </div>
   </div>
 
-  <!-- Categoría -->
-  <div class="col-md-3">
-    <label for="categoriaSelect" class="form-label fw-bold">Categoría:</label>
-    <select id="categoriaSelect" [(ngModel)]="selectedCategoria" (change)="onCategoriaChange()" class="form-select" [disabled]="!selectedRubro">
-      <option [value]="null">Todas</option>
-      <option *ngFor="let categoria of categorias" [value]="categoria.nroCategoria">
-        {{ categoria.nomCategoria }}
-      </option>
-    </select>
+  <!-- Barra de búsqueda amplia -->
+  <div class="row mb-3">
+    <div class="col-12">
+      <input id="searchInput" type="text" class="form-control form-control-lg" [(ngModel)]="searchText" placeholder="Ingrese un producto..." i18n-placeholder>
+    </div>
   </div>
-
-  <!-- Tipo de Producto -->
-  <div class="col-md-3">
-    <label for="tipoProductoSelect" class="form-label fw-bold">Tipo de Producto:</label>
-    <select id="tipoProductoSelect" [(ngModel)]="selectedTipoProducto" (change)="onTipoProductoChange()" class="form-select" [disabled]="!selectedCategoria">
-      <option [value]="null">Todos</option>
-      <option *ngFor="let tipo of tiposProductos" [value]="tipo.nro_tipo_producto">
-        {{ tipo.nom_tipo_producto }}
-      </option>
-    </select>
-  </div>
-
-  <!-- Marca -->
-  <div class="col-md-3">
-    <label for="marcaSelect" class="form-label fw-bold">Marca:</label>
-    <select id="marcaSelect" [(ngModel)]="selectedMarca" (change)="onMarcaChange()" class="form-select" [disabled]="!selectedTipoProducto">
-      <option [value]="null">Todas</option>
-      <option *ngFor="let marca of marcas" [value]="marca.nro_marca">
-        {{ marca.nom_marca }}
-      </option>
-    </select>
-  </div>
-</div>
-
-<!-- Barra de búsqueda amplia -->
-<div class="row mb-3">
-  <div class="col-12">
-    <input id="searchInput" type="text" class="form-control form-control-lg" [(ngModel)]="searchText" placeholder="Ingrese un producto...">
-  </div>
-</div>
-
 
   <!-- Listado de productos -->
   <div class="row">
@@ -73,7 +72,11 @@
                 type="button" 
                 class="btn btn-sm btn-dark w-100">
                 <i class="fa fa-shopping-cart"></i> 
-                {{ estaEnCarrito(item) ? 'Agregado' : 'Agregar' }}
+                @if (estaEnCarrito(item)) {
+                  <span i18n>Agregado</span>
+                } @else {
+                  <span i18n>Agregar</span>
+                }
               </button>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environments.developments';
+import { environment } from '../../environments/environment.developments';
 import { Categoria } from '../modelos/categoria.modelo';
 
 @Injectable({ providedIn: 'root' })
@@ -11,6 +11,14 @@ export class CategoriaService {
   constructor(private http: HttpClient) {}
 
   getCategoria(nroRubro: number): Observable<Categoria[]> {
-    return this.http.get<Categoria[]>(`${this.apiUrl}${nroRubro}`);
+    const language = window.location.port === '4201' ? 'en' : 'es';
+        console.log("Idioma seleccionado para la petición:", language);
+      
+        const headers = new HttpHeaders({
+          'Accept-Language': language 
+        });
+      
+        return this.http.get<Categoria[]>(`${this.apiUrl}${nroRubro}`, { headers });
+
   }
 }
