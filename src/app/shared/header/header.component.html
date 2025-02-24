@@ -12,24 +12,40 @@
           <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Contenido del menú -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                  <a class="nav-link text-white fw-semibold px-3" routerLink="/">Catálogo</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link text-white fw-semibold px-3" routerLink="/sucursales">Info sucursales</a>
-              </li>
-          </ul>
+       <!-- Contenido del menú -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto gap-3"> <!-- Espaciado entre iconos -->
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold px-3" routerLink="/">
+              <i class="fas fa-store fa-lg"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-semibold px-3" routerLink="/sucursales">
+              <i class="fas fa-map-marker-alt fa-lg"></i>
+            </a>
+          </li>
+        </ul>
+  
 
           <!-- Carrito de compras -->
-          <a class="nav-link text-white position-relative" routerLink="/carrito">
+          <a class="nav-link text-white position-relative me-3" routerLink="/carrito">
               <i class="fa fa-shopping-cart fa-lg"></i>
               <span class="badge bg-danger position-absolute top-0 start-100 translate-middle rounded-pill">
                   {{carritoService.cantidad()}}
               </span>
           </a>
+
+          <div class="dropdown ms-4">
+            <button class="btn btn-light dropdown-toggle rounded-pill px-3" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                🌎
+              </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="#" (click)="changeLanguage('es')">🇪🇸 Español</a></li>
+              <li><a class="dropdown-item" href="#" (click)="changeLanguage('en')">🇪🇳 English</a></li>
+            </ul>
+          </div>
       </div>
+      
   </div>
 </nav>

@@ -1,6 +1,6 @@
 export interface Categoria{
     nroCategoria: number,
-    nomCategoria: string,
+    categoria: string,
     nroRubro: number,
     vigente: string
 }

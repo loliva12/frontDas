@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environments.developments';
+import { environment } from '../../environments/environment.developments';
 import { Rubro } from '../modelos/rubros.model';
 
 
@@ -12,6 +12,14 @@ export class RubroService {
   constructor(private http: HttpClient) {}
 
   getRubro(): Observable<Rubro[]> {
-    return this.http.get<Rubro[]>(this.apiUrl);
+    const language = window.location.port === '4201' ? 'en' : 'es';
+    console.log("Idioma seleccionado para la petición:", language);
+  
+    const headers = new HttpHeaders({
+      'Accept-Language': language 
+    });
+  
+    return this.http.get<Rubro[]>(this.apiUrl, { headers });
   }
+  
 }

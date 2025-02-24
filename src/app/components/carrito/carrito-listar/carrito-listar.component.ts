@@ -30,8 +30,8 @@ export class CarritoListarComponent implements OnInit {
     this.getListCarrito();
 
     this.messageService.showMessage({
-      title: 'Producto eliminado',
-      text: 'El producto ha sido eliminado del carrito.'
+      title: $localize`:@@productoEliminado:Producto eliminado`,
+      text: $localize`:@@productoEliminadoTexto:El producto ha sido eliminado del carrito.`
     });
   }
 
@@ -44,8 +44,8 @@ export class CarritoListarComponent implements OnInit {
     this.getListCarrito();
     
     this.messageService.showMessage({
-      title: 'Carrito vaciado',
-      text: 'Todos los productos han sido eliminados del carrito.'
+      title: $localize`:@@carritoVaciado:Carrito vaciado`,
+      text: $localize`:@@carritoVaciadoTexto:Todos los productos han sido eliminados del carrito.`
     });
   }
   

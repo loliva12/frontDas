@@ -9,6 +9,18 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n":{
+        "locales": {
+          "en": {
+            "translation": "src/locale/messages.en.xlf",
+            "baseHref": "/en/"
+          },
+          "es-AR": {
+            "translation": "src/locale/messages.es-AR.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -39,6 +51,31 @@
             }
           },
           "configurations": {
+
+            "development-es": {
+              "localize": ["es-AR"],
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/app/environments/environment.ts",
+                  "with": "src/app/environments/environment.developments.ts"
+                }
+              ]
+            },
+            "development-en": {
+              "localize": ["en"],
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/app/environments/environment.ts",
+                  "with": "src/app/environments/environment.developments.ts"
+                }
+              ]
+            },
             "production": {
               "budgets": [
                 {
@@ -65,11 +102,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
-            "production": {
-              "buildTarget": "finalv2:build:production"
+            "development-es": {
+              "buildTarget": "finalv2:build:development-es"
             },
-            "development": {
-              "buildTarget": "finalv2:build:development"
+            "development-en": {
+              "buildTarget": "finalv2:build:development-en"
             }
           },
           "defaultConfiguration": "development"
