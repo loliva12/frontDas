@@ -5,6 +5,6 @@ export interface Sucursales{
     calle: String; 
     nroCalle: number; 
     telefonos: String; 
-    serviciosDisponibles: String; 
+    tipo_servicio: String; 
     horarioSucursal: String; 
 }

@@ -100,7 +100,23 @@ export class SucursalesComponent {
         this.sucursalSeleccionada.horarioSucursal = [];
       }
     }
-  
+
+    console.log('TiposServicios (antes de parsear):', this.sucursalSeleccionada.serviciosDisponibles);
+
+  // Parsear tipos_servicios si es un string
+  if (typeof this.sucursalSeleccionada.serviciosDisponibles === 'string') {
+    try {
+      this.sucursalSeleccionada.serviciosDisponibles = JSON.parse(this.sucursalSeleccionada.serviciosDisponibles);
+      console.log('TiposServicios (después de parsear):', this.sucursalSeleccionada.serviciosDisponibles);
+    } catch (error) {
+      console.error('Error al parsear tipos_servicios:', error);
+      this.sucursalSeleccionada.serviciosDisponibles = [];
+    }
+  }
+
+  // Verifica si tienes datos después de la asignación
+  console.log('Sucursal seleccionada:', this.sucursalSeleccionada);
+
     // Mostrar el modal
     let modal = new bootstrap.Modal(document.getElementById('sucursalModal'));
     modal.show();

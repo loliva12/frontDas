@@ -2,14 +2,21 @@
     <div class="card shadow-lg p-4 bg-white rounded">
         <h3 class="text-center mb-4 text-primary">💰 <span i18n>Comparador de Precios</span></h3>
         <hr />
-  
-        <!-- Botón para abrir el modal -->
-        <div class="text-center mb-3">
+        <div class="contenedor-ubicacion">
+            <!-- Ubicación seleccionada -->
+            <div class="seleccion-info">
+                <span class="ubicacion">
+                    {{ getNombreProvincia(selectedProvincia) }}, {{ getNombreLocalidad(selectedLocalidad) }}
+                </span>
+            </div>
+        
+            <!-- Botón para abrir el modal -->
             <button class="btn btn-primary fw-bold px-4" data-bs-toggle="modal" data-bs-target="#modalSeleccion">
                 📍 <span i18n>Seleccionar Ubicación</span>
             </button>
         </div>
-  
+        
+        
         <!-- Modal de Selección -->
         <div class="modal fade" id="modalSeleccion" tabindex="-1" aria-labelledby="modalSeleccionLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -20,7 +27,7 @@
                     </div>
                     <div class="modal-body">
                         <!-- Selección de Provincia -->
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label for="provincia" class="form-label fw-bold"><span i18n>Provincia</span></label>
                             <select class="form-select" id="provincia" [(ngModel)]="selectedProvincia" (change)="onProvinciaChange()">
                                 <option value="" disabled i18n>Seleccione una provincia</option>
@@ -29,9 +36,9 @@
                                 </option>
                             </select>
                         </div>
-  
+
                         <!-- Selección de Localidad -->
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label for="localidad" class="form-label fw-bold"><span i18n>Localidad</span></label>
                             <select class="form-select" id="localidad" [(ngModel)]="selectedLocalidad" (change)="onLocalidadSeleccionada($event)">
                                 <option value="" disabled i18n>Seleccione una localidad</option>
@@ -48,7 +55,7 @@
                 </div>
             </div>
         </div>
-  
+
         <!-- Tabla de comparación de precios -->
         <div class="table-responsive mt-3" *ngIf="comparacionPreciosTabla.length > 0">
             <table class="table table-bordered table-hover">
@@ -62,7 +69,10 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let producto of comparacionPreciosTabla">
-                        <td>{{ producto.nomProducto }}</td>
+                        <td class="text-start">
+                            <img [src]="producto.imagen" alt="{{ producto.nomProducto }}" class="img-thumbnail" width="50" height="50">
+                            <span class="fw-semibold text-dark">{{ producto.nomProducto }}</span>
+                        </td>
                         <td *ngFor="let supermercado of supermercados"
                             [ngClass]="{
                                 'borde-supermasbarato': supermercado === supermercadoMasBarato,
@@ -74,11 +84,9 @@
                             </span>
                         </td>
                     </tr>
-  
-                    <!-- Fila de Totales -->
                     <tr class="fw-bold bg-light">
                         <td class="text-dark" i18n>Total</td>
-                        <td *ngFor="let total of totalPorSupermercado" 
+                        <td *ngFor="let total of totalPorSupermercado" AC
                             [ngClass]="{'bg-warning text-dark': total.razonSocial === supermercadoMasBarato}">
                             {{ total.totalCompra | currency }}
                         </td>
@@ -87,5 +95,4 @@
             </table>
         </div>
     </div>
-  </div>
-  
+</div>

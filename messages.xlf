@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="es-AR" datatype="plaintext" original="ng2.template" target-language="es-AR">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
       <trans-unit id="ngb.alert.close" datatype="html">
-        <source>Close</source><target state="final">Close</target>
+        <source>Close</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/alert/alert.ts</context>
           <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.carousel.slide-number" datatype="html">
-        <source> Slide <x id="INTERPOLATION"/> of <x id="INTERPOLATION_1"/> </source><target state="final"> Slide <x id="INTERPOLATION"/> of <x id="INTERPOLATION_1"/> </target>
+        <source> Slide <x id="INTERPOLATION"/> of <x id="INTERPOLATION_1"/> </source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
           <context context-type="linenumber">132</context>
@@ -18,21 +18,21 @@
         <note priority="1" from="description">Currently selected slide number read by screen reader</note>
       </trans-unit>
       <trans-unit id="ngb.carousel.previous" datatype="html">
-        <source>Previous</source><target state="final">Anterior</target>
+        <source>Previous</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
           <context context-type="linenumber">143</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.carousel.next" datatype="html">
-        <source>Next</source><target state="final">Siguiente</target>
+        <source>Next</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/carousel/carousel.ts</context>
           <context context-type="linenumber">151,153</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-month" datatype="html">
-        <source>Select month</source><target state="final">Select month</target>
+        <source>Select month</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
           <context context-type="linenumber">92</context>
@@ -43,7 +43,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.datepicker.select-year" datatype="html">
-        <source>Select year</source><target state="final">Select year</target>
+        <source>Select year</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation-select.ts</context>
           <context context-type="linenumber">92</context>
@@ -54,7 +54,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.datepicker.previous-month" datatype="html">
-        <source>Previous month</source><target state="final">Previous month</target>
+        <source>Previous month</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
           <context context-type="linenumber">77,79</context>
@@ -65,7 +65,7 @@
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.datepicker.next-month" datatype="html">
-        <source>Next month</source><target state="final">Next month</target>
+        <source>Next month</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/datepicker/datepicker-navigation.ts</context>
           <context context-type="linenumber">102</context>
@@ -76,351 +76,329 @@
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.first" datatype="html">
-        <source>««</source><target state="final">««</target>
+        <source>««</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">290</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.previous" datatype="html">
-        <source>«</source><target state="final">«</target>
+        <source>«</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">306</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.next" datatype="html">
-        <source>»</source><target state="final">»</target>
+        <source>»</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">321,323</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.last" datatype="html">
-        <source>»»</source><target state="final">»»</target>
+        <source>»»</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">335,337</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.first-aria" datatype="html">
-        <source>First</source><target state="final">First</target>
+        <source>First</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">353,356</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.previous-aria" datatype="html">
-        <source>Previous</source><target state="final">Previous</target>
+        <source>Previous</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">376,377</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.next-aria" datatype="html">
-        <source>Next</source><target state="final">Next</target>
+        <source>Next</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">396,398</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.pagination.last-aria" datatype="html">
-        <source>Last</source><target state="final">Last</target>
+        <source>Last</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/pagination/pagination.ts</context>
           <context context-type="linenumber">407,409</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.progressbar.value" datatype="html">
-        <source><x id="INTERPOLATION"/></source><target state="final"><x id="INTERPOLATION"/></target>
+        <source><x id="INTERPOLATION"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/progressbar/progressbar.ts</context>
           <context context-type="linenumber">41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.HH" datatype="html">
-        <source>HH</source><target state="final">HH</target>
+        <source>HH</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">238</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.hours" datatype="html">
-        <source>Hours</source><target state="final">Hours</target>
+        <source>Hours</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">259</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.MM" datatype="html">
-        <source>MM</source><target state="final">MM</target>
+        <source>MM</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">279,281</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.minutes" datatype="html">
-        <source>Minutes</source><target state="final">Minutes</target>
+        <source>Minutes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">297,298</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
-        <source>Increment hours</source><target state="final">Increment hours</target>
+        <source>Increment hours</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">310,311</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
-        <source>Decrement hours</source><target state="final">Decrement hours</target>
+        <source>Decrement hours</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">333,335</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
-        <source>Increment minutes</source><target state="final">Increment minutes</target>
+        <source>Increment minutes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">357,358</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
-        <source>Decrement minutes</source><target state="final">Decrement minutes</target>
+        <source>Decrement minutes</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">376,379</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.SS" datatype="html">
-        <source>SS</source><target state="final">SS</target>
+        <source>SS</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">398</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.seconds" datatype="html">
-        <source>Seconds</source><target state="final">Seconds</target>
+        <source>Seconds</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">422,423</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
-        <source>Increment seconds</source><target state="final">Increment seconds</target>
+        <source>Increment seconds</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">441</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
-        <source>Decrement seconds</source><target state="final">Decrement seconds</target>
+        <source>Decrement seconds</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">441</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.timepicker.PM" datatype="html">
-        <source><x id="INTERPOLATION"/></source><target state="final"><x id="INTERPOLATION"/></target>
+        <source><x id="INTERPOLATION"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/timepicker/timepicker.ts</context>
           <context context-type="linenumber">441</context>
         </context-group>
       </trans-unit>
       <trans-unit id="ngb.toast.close-aria" datatype="html">
-        <source>Close</source><target state="final">Cerrar</target>
+        <source>Close</source>
         <context-group purpose="location">
           <context context-type="sourcefile">node_modules/src/toast/toast.ts</context>
           <context context-type="linenumber">95,96</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1878944583384618422" datatype="html">
-        <source>Cargando...</source><target state="final">Cargando...</target>
+        <source>Cargando...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
           <context context-type="linenumber">3,4</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5596532900450640283" datatype="html">
-        <source>🛒 Mi carrito</source><target state="final">🛒 Mi carrito</target>
+        <source>🛒 Mi carrito</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/carrito/carrito-listar/carrito-listar.component.html</context>
           <context context-type="linenumber">2,3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1915525456290405456" datatype="html">
-        <source>Vaciar carrito</source><target state="final">Vaciar carrito</target>
+        <source>Vaciar carrito</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/carrito/carrito-listar/carrito-listar.component.html</context>
-          <context context-type="linenumber">31,32</context>
+          <context context-type="linenumber">32,33</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="5537415768209788679" datatype="html">
-        <source>🛍️ Tu carrito está vacío.</source><target state="final">🛍️ Tu carrito está vacío.</target>
+      <trans-unit id="2601412941089785218" datatype="html">
+        <source>Comparar precios</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/carrito/carrito-listar/carrito-listar.component.html</context>
           <context context-type="linenumber">35,36</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2601412941089785218" datatype="html">
-        <source>Comparar precios</source><target state="final">Comparar precios</target>
+      <trans-unit id="5537415768209788679" datatype="html">
+        <source>🛍️ Tu carrito está vacío.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/carrito/carrito-listar/carrito-listar.component.html</context>
-          <context context-type="linenumber">44,45</context>
+          <context context-type="linenumber">39,40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productoEliminado" datatype="html">
-        <source>Producto eliminado</source><target state="final">Producto eliminado</target>
+        <source>Producto eliminado</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/carrito/carrito-listar/carrito-listar.component.ts</context>
           <context context-type="linenumber">33</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productoEliminadoTexto" datatype="html">
-        <source>El producto ha sido eliminado del carrito.</source><target state="final">El producto ha sido eliminado del carrito.</target>
+        <source>El producto ha sido eliminado del carrito.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/carrito/carrito-listar/carrito-listar.component.ts</context>
           <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="carritoVaciado" datatype="html">
-        <source>Carrito vaciado</source><target state="final">Carrito vaciado</target>
+        <source>Carrito vaciado</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/carrito/carrito-listar/carrito-listar.component.ts</context>
           <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="carritoVaciadoTexto" datatype="html">
-        <source>Todos los productos han sido eliminados del carrito.</source><target state="final">Todos los productos han sido eliminados del carrito.</target>
+        <source>Todos los productos han sido eliminados del carrito.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/carrito/carrito-listar/carrito-listar.component.ts</context>
           <context context-type="linenumber">48</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6856594051072926265" datatype="html">
-        <source>🛍️ Catálogo</source><target state="final">🛍️ Catálogo</target>
+        <source>🛍️ Catálogo</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.html</context>
           <context context-type="linenumber">2,3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4697277586870293640" datatype="html">
-        <source>Rubro:</source><target state="final">Rubro:</target>
+        <source>Rubro:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.html</context>
           <context context-type="linenumber">9,10</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="2975016556673138449" datatype="html">
-        <source>Todos</source><target state="final">Todos</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.html</context>
-          <context context-type="linenumber">11,12</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.html</context>
-          <context context-type="linenumber">33,34</context>
-        </context-group>
-      </trans-unit>
       <trans-unit id="8414649890496607475" datatype="html">
-        <source>Categoría:</source><target state="final">Categoría:</target>
+        <source>Categoría:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.html</context>
-          <context context-type="linenumber">20,21</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="4030076799559469157" datatype="html">
-        <source>Todas</source><target state="final">Todas</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.html</context>
-          <context context-type="linenumber">22,23</context>
-        </context-group>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.html</context>
-          <context context-type="linenumber">44,45</context>
+          <context context-type="linenumber">19,20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="96396209894346231" datatype="html">
-        <source>Tipo de Producto:</source><target state="final">Tipo de Producto:</target>
+        <source>Tipo de Producto:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.html</context>
-          <context context-type="linenumber">31,32</context>
+          <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5816128809872343195" datatype="html">
-        <source>Marca:</source><target state="final">Marca:</target>
+        <source>Marca:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.html</context>
-          <context context-type="linenumber">42,43</context>
+          <context context-type="linenumber">39,40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="83640860902887389" datatype="html">
-        <source>Ingrese un producto...</source><target state="final">Ingrese un producto...</target>
+        <source>Ingrese un producto...</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.html</context>
-          <context context-type="linenumber">55</context>
+          <context context-type="linenumber">51</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3244251302369873885" datatype="html">
-        <source>Agregado</source><target state="final">Agregado</target>
+        <source>Agregado</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.html</context>
-          <context context-type="linenumber">76,77</context>
+          <context context-type="linenumber">72,73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8524201838416230611" datatype="html">
-        <source>Agregar</source><target state="final">Agregar</target>
+        <source>Agregar</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.html</context>
-          <context context-type="linenumber">78,79</context>
+          <context context-type="linenumber">74,75</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productoAgregado" datatype="html">
-        <source>Producto agregado</source><target state="final">Producto agregado</target>
+        <source>Producto agregado</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.ts</context>
-          <context context-type="linenumber">206</context>
+          <context context-type="linenumber">270</context>
         </context-group>
       </trans-unit>
       <trans-unit id="productoAgregadoTexto" datatype="html">
-        <source><x id="PH" equiv-text="item.nom_producto"/> se ha agregado al carrito.</source><target state="final"><x id="PH" equiv-text="item.nom_producto"/> se ha agregado al carrito.</target>
+        <source><x id="PH" equiv-text="item.nom_producto"/> se ha agregado al carrito.</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/catalogo/catalogo-inicio/catalogo-inicio.component.ts</context>
-          <context context-type="linenumber">207</context>
+          <context context-type="linenumber">271</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4316080311286698488" datatype="html">
-        <source>Comparador de Precios</source><target state="final">Comparador de Precios</target>
+        <source>Comparador de Precios</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/comparador-precios/comparador-precios.component.html</context>
           <context context-type="linenumber">3</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6869903488177602516" datatype="html">
-        <source>Seleccionar Ubicación</source><target state="final">Seleccionar Ubicación</target>
+        <source>Seleccionar Ubicación</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/comparador-precios/comparador-precios.component.html</context>
           <context context-type="linenumber">9,10</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9204005319841684002" datatype="html">
-        <source>Selecciona tu Ubicación</source><target state="final">Selecciona tu Ubicación</target>
+        <source>Selecciona tu Ubicación</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/comparador-precios/comparador-precios.component.html</context>
           <context context-type="linenumber">18</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6721897967860471426" datatype="html">
-        <source>Provincia</source><target state="final">Provincia</target>
+        <source>Provincia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/comparador-precios/comparador-precios.component.html</context>
           <context context-type="linenumber">24</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1676121980366120684" datatype="html">
-        <source>Seleccione una provincia</source><target state="final">Seleccione una provincia</target>
+        <source>Seleccione una provincia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/comparador-precios/comparador-precios.component.html</context>
           <context context-type="linenumber">26,27</context>
@@ -431,14 +409,14 @@
         </context-group>
       </trans-unit>
       <trans-unit id="5531631945901427487" datatype="html">
-        <source>Localidad</source><target state="final">Localidad</target>
+        <source>Localidad</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/comparador-precios/comparador-precios.component.html</context>
           <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7099493164958355158" datatype="html">
-        <source>Seleccione una localidad</source><target state="final">Seleccione una localidad</target>
+        <source>Seleccione una localidad</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/comparador-precios/comparador-precios.component.html</context>
           <context context-type="linenumber">37,38</context>
@@ -449,174 +427,167 @@
         </context-group>
       </trans-unit>
       <trans-unit id="4798961227159743968" datatype="html">
-        <source>Cerrar</source><target state="final">Cerrar</target>
+        <source>Cerrar</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/comparador-precios/comparador-precios.component.html</context>
           <context context-type="linenumber">45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3905178848571662288" datatype="html">
-        <source>Aceptar</source><target state="final">Aceptar</target>
+        <source>Aceptar</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/comparador-precios/comparador-precios.component.html</context>
           <context context-type="linenumber">46</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7072282989020813528" datatype="html">
-        <source>Producto</source><target state="final">Producto</target>
+        <source>Producto</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/comparador-precios/comparador-precios.component.html</context>
           <context context-type="linenumber">57,58</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3448462145758383019" datatype="html">
-        <source>Total</source><target state="final">Total</target>
+        <source>Total</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/comparador-precios/comparador-precios.component.html</context>
-          <context context-type="linenumber">80,81</context>
+          <context context-type="linenumber">81,82</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6222114806341244652" datatype="html">
-        <source>📍 Información Sucursales</source><target state="final">📍 Información Sucursales</target>
+        <source>📍 Información Sucursales</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">3,5</context>
         </context-group>
       </trans-unit>
       <trans-unit id="434129381178346887" datatype="html">
-        <source>Seleccionar Provincia</source><target state="final">Seleccionar Provincia</target>
+        <source>Seleccionar Provincia</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">7,8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2870596867407163749" datatype="html">
-        <source>Seleccionar Localidad</source><target state="final">Seleccionar Localidad</target>
+        <source>Seleccionar Localidad</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">18,19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3694328418324212049" datatype="html">
-        <source>🔍 Buscar Sucursal</source><target state="final">🔍 Buscar Sucursal</target>
+        <source>🔍 Buscar Sucursal</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">29,30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6228376219983316117" datatype="html">
-        <source>Ingrese el nombre de la sucursal</source><target state="final">Ingrese el nombre de la sucursal</target>
+        <source>Ingrese el nombre de la sucursal</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">30</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1955315444811491895" datatype="html">
-        <source>CUIT</source><target state="final">CUIT</target>
+        <source>CUIT</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">38,39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7609303198888559754" datatype="html">
-        <source>Razón Social</source><target state="final">Razón Social</target>
+        <source>Razón Social</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">39,40</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4847016320509568712" datatype="html">
-        <source>Sucursal</source><target state="final">Sucursal</target>
+        <source>Sucursal</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">40,41</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5734658048860397677" datatype="html">
-        <source>Calle</source><target state="final">Calle</target>
+        <source>Calle</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">41,42</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5129898699442968363" datatype="html">
-        <source>Número</source><target state="final">Número</target>
+        <source>Número</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">42,43</context>
         </context-group>
       </trans-unit>
       <trans-unit id="7612050514770297743" datatype="html">
-        <source>Teléfonos</source><target state="final">Teléfonos</target>
+        <source>Teléfonos</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">43,44</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2656760189624669010" datatype="html">
-        <source>Acciones</source><target state="final">Acciones</target>
+        <source>Acciones</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">44,45</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4273600117166588706" datatype="html">
-        <source> Ver Más </source><target state="final"> Ver Más </target>
+        <source> Ver Más </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">57</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8893146412633740323" datatype="html">
-        <source>📌 Detalles de Sucursal</source><target state="final">📌 Detalles de Sucursal</target>
+        <source>📌 Detalles de Sucursal</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">72,73</context>
         </context-group>
       </trans-unit>
       <trans-unit id="4216049144480094890" datatype="html">
-        <source>🕒 Horario:</source><target state="final">🕒 Horario:</target>
+        <source>🕒 Horario:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
-          <context context-type="linenumber">77,78</context>
+          <context context-type="linenumber">80,81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="517694229637756754" datatype="html">
-        <source>🛠️ Servicios Disponibles:</source><target state="final">🛠️ Servicios Disponibles:</target>
+        <source>🛠️ Servicios Disponibles:</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">92,93</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1338145541957372057" datatype="html">
-        <source> ✖ Cerrar </source><target state="final"> ✖ Cerrar </target>
+        <source> ✖ Cerrar </source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
-          <context context-type="linenumber">87</context>
+          <context context-type="linenumber">104</context>
         </context-group>
-      </trans-unit>
-      <trans-unit id="closeButton" datatype="html">
-        <source>Cerrar</source><target state="final">Cerrar</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/core copy/layout/message-dialog/message-dialog.component.html</context>
-          <context context-type="linenumber">24,25</context>
-        </context-group>
-      </trans-unit>
-      <trans-unit id="1614675217205236003" datatype="html">
-        <source>Info Sucursales</source><target state="final">Info Sucursales</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
-          <context context-type="linenumber">27,29</context>
-        </context-group>
-        <note priority="1" from="description">Branches info label</note>
       </trans-unit>
       <trans-unit id="3582708017880173515" datatype="html">
-        <source>Catálogo</source><target state="final">Catálogo</target>
+        <source>Catálogo</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
           <context context-type="linenumber">21,23</context>
         </context-group>
         <note priority="1" from="description">Catalog label</note>
+      </trans-unit>
+      <trans-unit id="1614675217205236003" datatype="html">
+        <source>Info Sucursales</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
+          <context context-type="linenumber">27,29</context>
+        </context-group>
+        <note priority="1" from="description">Branches info label</note>
       </trans-unit>
     </body>
   </file>

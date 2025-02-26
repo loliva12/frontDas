@@ -117,26 +117,38 @@ export class ComparadorPreciosComponent implements OnInit {
       console.warn("No se seleccionó una localidad.");
       return;
     }
-
+  
     const productosCarrito = this.carritoService.getCarrito().map(item => item.producto.codBarra);
     console.log("Productos en el carrito:", productosCarrito);
-
+  
     this.compararPreciosService.obtenerComparacionPrecios(productosCarrito, this.selectedLocalidad).subscribe(data => {
-        console.log("Datos recibidos del servicio:", data);
-
-        if (!data || data.length === 0) {
-            console.warn("El servicio no devolvió datos.");
-            return;
-        }
-
-        this.comparacionPreciosTabla = this.transformarComparacion(data);
-
-        // Extraer supermercados únicos
-        this.supermercados = [...new Set(data.map(item => item.razonSocial))];
-
-        this.calcularTotales();
+      console.log("Datos recibidos del servicio:", data);
+  
+      if (!data || data.length === 0) {
+        console.warn("El servicio no devolvió datos.");
+        return;
+      }
+  
+      this.comparacionPreciosTabla = this.transformarComparacion(data);
+  
+      // Extraer supermercados únicos
+      this.supermercados = [...new Set(data.map(item => item.razonSocial))];
+  
+      // Aquí buscamos el supermercado más barato entre todos
+      const supermercadoMasBaratoData = data.find(item => item.supermercadoMasBarato === "1");
+  
+      if (supermercadoMasBaratoData) {
+        // Asignar el supermercado más barato (razonSocial)
+        this.supermercadoMasBarato = supermercadoMasBaratoData.razonSocial;
+      } else {
+        console.warn("No se encontró un supermercado más barato.");
+      }
+  
+      this.calcularTotales();
     });
   }
+  
+  
 
   transformarComparacion(datos: CompararPreciosResponse[]): ComparacionPreciosTabla[] {
     const productosMap = new Map<string, ComparacionPreciosTabla>();
@@ -146,6 +158,7 @@ export class ComparadorPreciosComponent implements OnInit {
             productosMap.set(item.codBarra, {
                 nomProducto: item.nomProducto,
                 codBarra: item.codBarra,
+                imagen: item.imagen, 
                 preciosPorSupermercado: {},
                 precioMinimo: item.precio, 
                 esMasBaratoPorSupermercado: {} 
@@ -182,14 +195,25 @@ calcularTotales() {
     return { razonSocial: supermercado, totalCompra };
   });
 
-  // Encontrar el supermercado con el menor total
-  if (this.totalPorSupermercado.length > 0) {
-    const minTotalObj = this.totalPorSupermercado.reduce((min, t) => t.totalCompra < min.totalCompra ? t : min, this.totalPorSupermercado[0]);
-    this.supermercadoMasBarato = minTotalObj.razonSocial;
-  } else {
-    this.supermercadoMasBarato = '';
-  }
-
   console.log("Supermercado más barato:", this.supermercadoMasBarato);
 }
+
+getNombreLocalidad(localidadId?: number): string {
+  if (!localidadId) return 'No seleccionada';
+
+  const localidad = this.localidades.find(loc => Number(loc.nroLocalidad) === localidadId);
+  return localidad ? localidad.nomLocalidad : 'Desconocida';
+}
+
+getNombreProvincia(provinciaId?: string): string {
+  if (!provinciaId) return 'No seleccionada';
+
+  const provincia = this.provincias.find(prov => Number(prov.codProvincia) === Number(provinciaId));
+  return provincia ? provincia.nomProvincia : 'Desconocida';
+}
+
+
+
+
+
 }

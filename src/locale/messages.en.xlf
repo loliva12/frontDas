@@ -581,12 +581,42 @@
           <context context-type="linenumber">77,78</context>
         </context-group>
       </trans-unit>
+      <trans-unit id="517694229637756754" datatype="html">
+        <source>🛠️ Servicios Disponibles:</source><target state="final">🛠️ Available Services:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
+          <context context-type="linenumber">92,93</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="1338145541957372057" datatype="html">
         <source> ✖ Cerrar </source><target state="final"> ✖ Close </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/sucursales/sucursales.component.html</context>
           <context context-type="linenumber">87</context>
         </context-group>
+      </trans-unit>
+      <trans-unit id="closeButton" datatype="html">
+        <source>Cerrar</source><target state="final">Close</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/core copy/layout/message-dialog/message-dialog.component.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1614675217205236003" datatype="html">
+        <source>Info Sucursales</source><target state="final">Branches Info</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
+          <context context-type="linenumber">27,29</context>
+        </context-group>
+        <note priority="1" from="description">Branches info label</note>
+      </trans-unit>
+       <trans-unit id="3582708017880173515" datatype="html">
+        <source>Catálogo</source><target state="final">Catalog</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/header/header.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+        <note priority="1" from="description">Catalog label</note>
       </trans-unit>
     </body>
   </file>

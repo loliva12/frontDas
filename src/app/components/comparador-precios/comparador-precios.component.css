@@ -76,3 +76,75 @@ body {
         padding: 10px;
     }
 }
+
+/* Modal */
+.modal-content {
+    padding: 20px;
+}
+
+/* Evitar enfoque automático */
+.modal-body select {
+    outline: none;
+}
+
+/* Mejorar la accesibilidad y el enfoque de los selects */
+.form-select {
+    transition: all 0.2s ease;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.form-select:focus {
+    background-color: #fff;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Ajustar el fondo y el estilo de la modal */
+.modal-backdrop {
+    z-index: 1040 !important;
+}
+
+
+/* Ubicacion actual */
+.seleccion-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid #d1d9e6;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+    text-align: center;
+    background: #ffffff;
+}
+
+/* Texto más compacto pero legible */
+.ubicacion {
+    font-weight: bold;
+    font-size: 18px;
+    color: #0056b3;
+}
+/* Efecto hover */
+.seleccion-info:hover {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+    border-color: #0056b3;
+}
+
+/* Contenedor flexible */
+.contenedor-ubicacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espaciado entre los elementos */
+    margin: auto;
+    max-width: 400px;
+}
+
+
+
+
+

@@ -14,18 +14,21 @@
 
        <!-- Contenido del menú -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto gap-3"> <!-- Espaciado entre iconos -->
-          <li class="nav-item">
-            <a class="nav-link text-white fw-semibold px-3" routerLink="/">
-              <i class="fas fa-store fa-lg"></i>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fw-semibold px-3" routerLink="/sucursales">
-              <i class="fas fa-map-marker-alt fa-lg"></i>
-            </a>
-          </li>
-        </ul>
+      <ul class="navbar-nav mx-auto gap-3"> <!-- Espaciado entre iconos -->
+        <li class="nav-item">
+          <a class="nav-link text-white fw-semibold px-3 d-flex align-items-center gap-2" routerLink="/">
+            <i class="fas fa-store fa-lg"></i> 
+            <span i18n="Catalog label">Catálogo</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white fw-semibold px-3 d-flex align-items-center gap-2" routerLink="/sucursales">
+            <i class="fas fa-map-marker-alt fa-lg"></i> 
+            <span i18n="Branches info label">Info Sucursales</span>
+          </a>
+        </li>
+      </ul>
+      
   
 
           <!-- Carrito de compras -->
@@ -36,15 +39,25 @@
               </span>
           </a>
 
-          <div class="dropdown ms-4">
-            <button class="btn btn-light dropdown-toggle rounded-pill px-3" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                🌎
-              </button>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
-              <li><a class="dropdown-item" href="#" (click)="changeLanguage('es')">🇪🇸 Español</a></li>
-              <li><a class="dropdown-item" href="#" (click)="changeLanguage('en')">🇪🇳 English</a></li>
+          <div class="dropdown ms-2">
+            <button class="btn btn-light dropdown-toggle rounded-pill px-2 py-1 small" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 0.85rem;">
+              🌎
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end p-1 text-center" aria-labelledby="languageDropdown" style="min-width: 120px;">
+              <li>
+                <a class="dropdown-item py-1 d-flex align-items-center justify-content-center" href="#" (click)="changeLanguage('es')">
+                  <img src="https://flagcdn.com/w40/es.png" alt="Español" width="24" class="me-2"> Español
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item py-1 d-flex align-items-center justify-content-center" href="#" (click)="changeLanguage('en')">
+                  <img src="https://flagcdn.com/w40/gb.png" alt="English" width="24" class="me-2"> English
+                </a>
+              </li>
             </ul>
           </div>
+          
+          
       </div>
       
   </div>
