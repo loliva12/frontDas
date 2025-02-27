@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Provincia } from '../../api/modelos/provincia.model';
@@ -67,6 +67,19 @@ export class ComparadorPreciosComponent implements OnInit {
     });
   }
   
+  ngAfterViewInit() {
+    this.inicializarTooltips();
+  }
+
+  inicializarTooltips() {
+    setTimeout(() => {
+      const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.forEach((tooltipTriggerEl) => {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    }, 500); // Esperar un poco para asegurar que la vista se haya renderizado completamente
+  }
+
 
   onProvinciaChange() {
     console.log('Provincia seleccionada:', this.selectedProvincia);
@@ -121,31 +134,27 @@ export class ComparadorPreciosComponent implements OnInit {
     const productosCarrito = this.carritoService.getCarrito().map(item => item.producto.codBarra);
     console.log("Productos en el carrito:", productosCarrito);
   
-    this.compararPreciosService.obtenerComparacionPrecios(productosCarrito, this.selectedLocalidad).subscribe(data => {
-      console.log("Datos recibidos del servicio:", data);
+    this.compararPreciosService.obtenerComparacionPrecios(productosCarrito, this.selectedLocalidad).subscribe({
+      next: (data) => {
+          console.log("Datos recibidos del servicio:", data);
+          if (!data || data.length === 0) {
+              console.warn("El servicio no devolvió datos.");
+              return;
+          }
+          this.comparacionPreciosTabla = this.transformarComparacion(data);
+          this.supermercados = [...new Set(data.map(item => item.razonSocial))];
   
-      if (!data || data.length === 0) {
-        console.warn("El servicio no devolvió datos.");
-        return;
+          const supermercadoMasBaratoData = data.find(item => item.supermercadoMasBarato === "1");
+          this.supermercadoMasBarato = supermercadoMasBaratoData ? supermercadoMasBaratoData.razonSocial : '';
+  
+          this.calcularTotales();
+      },
+      error: (err) => {
+          console.error("Error al obtener la comparación de precios:", err);
       }
+  });
   
-      this.comparacionPreciosTabla = this.transformarComparacion(data);
   
-      // Extraer supermercados únicos
-      this.supermercados = [...new Set(data.map(item => item.razonSocial))];
-  
-      // Aquí buscamos el supermercado más barato entre todos
-      const supermercadoMasBaratoData = data.find(item => item.supermercadoMasBarato === "1");
-  
-      if (supermercadoMasBaratoData) {
-        // Asignar el supermercado más barato (razonSocial)
-        this.supermercadoMasBarato = supermercadoMasBaratoData.razonSocial;
-      } else {
-        console.warn("No se encontró un supermercado más barato.");
-      }
-  
-      this.calcularTotales();
-    });
   }
   
   
@@ -161,7 +170,12 @@ export class ComparadorPreciosComponent implements OnInit {
                 imagen: item.imagen, 
                 preciosPorSupermercado: {},
                 precioMinimo: item.precio, 
-                esMasBaratoPorSupermercado: {} 
+                esMasBaratoPorSupermercado: {}, 
+                sustituto: item.cod_barra_prod_sustituto ? {
+                  cod_barra_prod_sustituto: item.cod_barra_prod_sustituto, 
+                  nombre_producto_sustituto: item.nombre_producto_sustituto,
+                  precio_producto_sustituto: item.precio_producto_sustituto
+                } : null
             });
         }
 
@@ -184,6 +198,7 @@ export class ComparadorPreciosComponent implements OnInit {
 
     return Array.from(productosMap.values());
 }
+
 
 calcularTotales() {
   console.log("Calculando totales por supermercado...");

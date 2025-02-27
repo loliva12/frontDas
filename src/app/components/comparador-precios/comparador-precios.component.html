@@ -78,20 +78,24 @@
                                 'borde-supermasbarato': supermercado === supermercadoMasBarato,
                                 'texto-verde': producto.esMasBaratoPorSupermercado[supermercado]
                             }">
-                            <span [ngClass]="{'text-danger fw-bold': producto.preciosPorSupermercado[supermercado] == null}">
+                            
+                            <span [ngClass]="{'text-danger fw-bold': producto.preciosPorSupermercado[supermercado] == null}"
+                                [attr.title]="producto.sustituto ? 'Sustituto: ' + producto.sustituto.nombre_producto_sustituto + ' - ' + (producto.sustituto.precio_producto_sustituto | currency) : ''">
                                 {{ producto.preciosPorSupermercado[supermercado] != null ? 
                                 (producto.preciosPorSupermercado[supermercado] | currency) : 'Sin stock' }}
-                            </span>
+                            </span>    
+
                         </td>
                     </tr>
                     <tr class="fw-bold bg-light">
                         <td class="text-dark" i18n>Total</td>
-                        <td *ngFor="let total of totalPorSupermercado" AC
+                        <td *ngFor="let total of totalPorSupermercado"
                             [ngClass]="{'bg-warning text-dark': total.razonSocial === supermercadoMasBarato}">
                             {{ total.totalCompra | currency }}
                         </td>
                     </tr>
                 </tbody>
+                
             </table>
         </div>
     </div>
